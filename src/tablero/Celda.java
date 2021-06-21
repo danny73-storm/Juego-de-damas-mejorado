@@ -6,20 +6,20 @@ public class Celda {
     private boolean esColor;
     private Ficha ficha;
 
-    private char celda = 186    ;
-    private char celdaColor = 219;  
+    private char celdaColor = 219;     
     
     
     public static final String ANSI_WHITE = "\u001B[37m" ;
-    public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
-    public static final String ANSI_RESET = "\u001B[0m";
-    public void setFicha(Ficha f) {
-        this.ficha = f;
-    }
-
+    public static final String ANSI_BLACK = "\u001B[30m";
     
+    public void setFicha(Ficha f, int x, int y) {
+        this.ficha = f;
+        this.ficha.setCoordenada(x, y);
+    }
+   
+    public void setFicha() {
+        this.ficha = null;
+    }
 
     public boolean getEsColor() {
         return this.esColor;
@@ -45,7 +45,7 @@ public class Celda {
         if (esColor) {
             res = imprimir(ANSI_WHITE, linea);
         } else {
-            res = imprimir(ANSI_BLUE, linea);
+            res = imprimir(ANSI_BLACK, linea);
         }
 
         return res;
