@@ -37,7 +37,7 @@ public class Tablero {
             if (!tablero[posXFin][posYFin].ocupadaPorFicha()) {
                 tablero[posXFin][posYFin].setFicha(tablero[posXIni][posYIni].getFicha());
                 resultado = true;
-            }
+             }
         }
         return resultado;
     }

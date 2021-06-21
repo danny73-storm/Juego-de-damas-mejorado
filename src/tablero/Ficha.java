@@ -17,8 +17,6 @@ public class Ficha {
         return res;
     }
 
-
-
     public Ficha(boolean esNegra , String id){
         this.esNegra = esNegra;
         this.id = id;

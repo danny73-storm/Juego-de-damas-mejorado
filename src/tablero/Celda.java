@@ -56,17 +56,18 @@ public class Celda {
         String res = "";
         if (ficha != null) {
             if ((linea == 0) || (linea == 2))
-                res = "" + color + celdaColor + celdaColor + ficha.getCaracter() + ficha.getCaracter() + color
-                        + celdaColor + celdaColor;
+                res = "" + color + celdaColor + celdaColor + ficha.getCaracter() 
+                        + ficha.getCaracter() + color + celdaColor + celdaColor;
             if (linea == 1)
-                res = "" + color + celdaColor + ficha.getCaracter() + ficha.getId() + ficha.getCaracter() + color
-                        + celdaColor;
+                res = "" + color + celdaColor + ficha.getCaracter() + ficha.getId() 
+                        + ficha.getCaracter() + color+ celdaColor;
             // res=""+ color+celdaColor+
             // ficha.getCaracter()+ficha.getCaracter()+ficha.getCaracter()+ficha.getCaracter()
             // +color+ celdaColor;
 
         } else {
-            res = "" + color + celdaColor + celdaColor + celdaColor + celdaColor + celdaColor + celdaColor;
+            res = "" + color + celdaColor + celdaColor + celdaColor + celdaColor 
+                    + celdaColor + celdaColor;
         }
 
         return res;
